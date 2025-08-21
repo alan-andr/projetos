@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="./assets/css/geral.css">
+</head>
+<body>
+    <header>
+        <h1>To-do List ( Lista de Afazeres )</h1>
+    </header>
+    <main>
+        <section>
+            <label for="tarefa">
+                Tarefa: <input type="text" name="tarefa" id="tarefa" placeholder="">
+            </label>
+            <input type="button" value="Adicionar Tarefa" id="adicionar">
+        </section>
+        <section class="lista">
+            <ul id="lista-tarefas"></ul>
+        </section>
+        <div id="mensagem"></div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

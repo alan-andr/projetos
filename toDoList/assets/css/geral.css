@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-texto: #fffaff;
+    --cor-fundo-01: #d8315b;
+    --cor-fundo-02: #1e1b18;
+    --fonte-principal: 'Amatic SC', Arial, Helvetica, sans-serif;
+    --fonte-texto: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo-01);
+}
+
+header h1 {
+    text-align: center;
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+
+    font-size: 2rem;
+}
+
+main {
+    font-family: var(--fonte-texto);
+}
+
+main > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .325rem;
+}
+
+section.lista {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--cor-fundo-01);
+}
+
+section.lista > h2 {
+    text-align: center;
+}
+
+section.lista ul#lista-tarefas {
+    list-style: none;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.lista ul#lista-tarefas > h2#titulo-tarefas {
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+}
+
+section.lista ul#lista-tarefas > li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px solid black;
+
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    border-radius: 1rem;
+}
+
+ul#lista-tarefas > li > span.item_texto {
+    text-transform: capitalize;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+}
+
+ul#lista-tarefas > li > span.concluida {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+ul#lista-tarefas > li > div.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .425rem;
+    
+    margin: .350rem 0 0 0;
+}
+
+div#mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
