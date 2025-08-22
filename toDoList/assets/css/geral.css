@@ -74,7 +74,7 @@ input[type=button] {
 }
 
 input[type=button]:hover {
-    background-color: var(--cor-05);
+    background-color: var(--cor-06);
     cursor: pointer;
     transition-duration: .8s;
 }
@@ -95,9 +95,8 @@ section.lista {
 
     margin: auto;
     margin-top: 2.5rem;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     border-radius: .850rem;
-    box-shadow: 1px 3px 8px -1px #d8315b40;
 
 }
 
@@ -116,8 +115,10 @@ section.lista ul#lista-tarefas {
 
 section.lista ul#lista-tarefas > h2#titulo-tarefas {
     color: var(--cor-05);
+
     font-family: var(--fonte-principal);
     font-size: 2rem;
+    text-shadow: 1px 1px 6px #d8315b5c;
 
     margin: 1.2rem 0 1.2rem 0;
 }
@@ -132,6 +133,7 @@ section.lista ul#lista-tarefas > li {
     margin: 1rem 0 0 0;
     border-radius: 1rem;
     border: 1px solid var(--cor-05);
+    box-shadow: 1px 3px 8px -1px #d8315b28;
 
     max-width: 100%;
     width: 330px;
@@ -143,6 +145,9 @@ ul#lista-tarefas > li > span.item_texto {
     text-transform: capitalize;
     font-family: var(--fonte-texto);
     font-size: .925rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px 4px #d8315b28;
+
     color: var(--cor-05);
 }
 
