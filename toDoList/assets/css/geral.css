@@ -9,34 +9,70 @@
 }
 
 :root {
-    --cor-texto: #fffaff;
-    --cor-fundo-01: #d8315b;
-    --cor-fundo-02: #1e1b18;
+    --cor-01: #3e92cc;
+    --cor-02: #0a2463;
+    --cor-03: #fffaff;
+    --cor-04: #FFFAFA;
+    --cor-05: #d8315b;
+    --cor-06: #AE455F;
+    --cor-07: #1e1b18;
     --fonte-principal: 'Amatic SC', Arial, Helvetica, sans-serif;
     --fonte-texto: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: var(--cor-fundo-01);
-}
-
 header h1 {
     text-align: center;
-    color: var(--cor-texto);
+    color: var(--cor-05);
     font-family: var(--fonte-principal);
-
     font-size: 2rem;
+
+    margin: 1rem 0 0 0;
 }
 
 main {
     font-family: var(--fonte-texto);
 }
 
-main > section {
+main > section.input {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .325rem;
+
+    margin: 1rem 0 0 0;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input[type=button] {
+    background-color: var(--cor-05);
+    color: white;
+    
+    padding: 8px 8px;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px -1px #ae455f6c;
+    
+    font-weight: bold;
+    font-family: var(--fonte-texto);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
+    font-size: .725rem;
+
+    width: 100%;
+    max-width: 120px;
+}
+
+input[type=button]:hover {
+    background-color: var(--cor-05);
+    cursor: pointer;
+    transition-duration: .8s;
+}
+
+input[type=text]:focus {
+    outline: none;
+    background-color: beige;
 }
 
 section.lista {
@@ -48,8 +84,7 @@ section.lista {
     margin: auto;
 
     width: 100%;
-    max-width: 300px;
-    background-color: var(--cor-fundo-01);
+    max-width: 400px;
 }
 
 section.lista > h2 {
@@ -66,33 +101,38 @@ section.lista ul#lista-tarefas {
 }
 
 section.lista ul#lista-tarefas > h2#titulo-tarefas {
-    color: var(--cor-texto);
+    color: var(--cor-04);
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
 }
 
 section.lista ul#lista-tarefas > li {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: row;
+    justify-content: space-around;
     align-items: center;
-
-    border: 5px solid black;
 
     padding: 1rem;
     margin: 1rem 0 0 0;
     border-radius: 1rem;
+    border: 1px solid var(--cor-05);
+
+    max-width: 100%;
+    width: 350px;
+
+    background-color: var(--cor-04);
 }
 
 ul#lista-tarefas > li > span.item_texto {
     text-transform: capitalize;
     font-family: var(--fonte-texto);
-    color: var(--cor-texto);
+    font-size: .925rem;
+    color: var(--cor-05);
 }
 
 ul#lista-tarefas > li > span.concluida {
     text-decoration: line-through;
-    color: gray;
+    color: var(--cor-05);
     opacity: 0.7;
 }
 
@@ -102,7 +142,7 @@ ul#lista-tarefas > li > div.botoes {
     align-items: center;
     gap: .425rem;
     
-    margin: .350rem 0 0 0;
+    border-radius: 1rem;
 }
 
 div#mensagem {
