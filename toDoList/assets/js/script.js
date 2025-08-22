@@ -4,6 +4,10 @@ btnAdicionar.addEventListener('click', () => {
     let textoTarefa = document.getElementById('tarefa').value;
     let divMensagem = document.getElementById('mensagem');
     let mensagem = document.createElement('p');
+    
+    let sectionLista = document.querySelector('section.lista');
+    sectionLista.style.backgroundColor = '#FFFAFA';
+    sectionLista.style.border = '3px solid var(--cor-06)';
 
     divMensagem.innerHTML = '';
 

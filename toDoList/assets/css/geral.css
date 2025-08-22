@@ -20,13 +20,15 @@
     --fonte-texto: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
+header {
+    margin: 2rem 0 2rem 0;
+}
+
 header h1 {
     text-align: center;
     color: var(--cor-05);
     font-family: var(--fonte-principal);
-    font-size: 2rem;
-
-    margin: 1rem 0 0 0;
+    font-size: 3rem;
 }
 
 main {
@@ -37,14 +39,20 @@ main > section.input {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .325rem;
+    gap: 1.5rem;
 
-    margin: 1rem 0 0 0;
+    margin: 3rem 0 0 0;
 }
 
 input[type=text] {
     border: none;
     border-bottom: 1px solid black;
+
+    width: 100%;
+    max-width: 200px;
+
+    text-align: center;
+    font-family: var(--fonte-texto);
 }
 
 input[type=button] {
@@ -82,10 +90,15 @@ section.lista {
     justify-content: center;
     align-items: center;
 
-    margin: auto;
-
     width: 100%;
     max-width: 400px;
+
+    margin: auto;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    border-radius: .850rem;
+    box-shadow: 1px 3px 8px -1px #d8315b40;
+
 }
 
 section.lista > h2 {
@@ -104,7 +117,7 @@ section.lista ul#lista-tarefas {
 section.lista ul#lista-tarefas > h2#titulo-tarefas {
     color: var(--cor-05);
     font-family: var(--fonte-principal);
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     margin: 1.2rem 0 1.2rem 0;
 }
@@ -121,9 +134,9 @@ section.lista ul#lista-tarefas > li {
     border: 1px solid var(--cor-05);
 
     max-width: 100%;
-    width: 350px;
+    width: 330px;
 
-    background-color: var(--cor-04);
+    background-color: var(--cor-03);
 }
 
 ul#lista-tarefas > li > span.item_texto {
