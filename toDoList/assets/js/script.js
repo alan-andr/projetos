@@ -6,7 +6,6 @@ btnAdicionar.addEventListener('click', () => {
     let mensagem = document.createElement('p');
 
     let sectionLista = document.querySelector('section.lista');
-    let i = document.createElement('i');
 
     divMensagem.innerHTML = '';
 

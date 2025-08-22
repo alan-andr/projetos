@@ -40,6 +40,7 @@ main {
 
 main > section.input {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -52,7 +53,8 @@ input[type=text] {
     border-bottom: 1px solid black;
 
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
+    padding: .300rem;
 
     text-align: center;
     font-size: 1rem;
@@ -70,7 +72,7 @@ input[type=button] {
     font-weight: bold;
     font-family: var(--fonte-texto);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
-    font-size: .525rem;
+    font-size: .725rem;
     border: 1px solid var(--cor-07);
 
     width: 100%;
@@ -142,10 +144,9 @@ section.lista ul#lista-tarefas > h2#titulo-tarefas {
 
 section.lista ul#lista-tarefas > li {
     display: flex;
-    flex-flow: row;
+    flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    gap: .500rem;
 
     padding: 1rem;
     margin: 1rem 0 0 0;
@@ -154,6 +155,7 @@ section.lista ul#lista-tarefas > li {
     box-shadow: 1px 3px 8px -1px #d8315b28;
 
     max-width: 100%;
+    height: 150px;
     width: 300px;
 
     background-color: var(--cor-03);
@@ -162,7 +164,7 @@ section.lista ul#lista-tarefas > li {
 ul#lista-tarefas > li > span.item_texto {
     text-transform: uppercase;
     font-family: var(--fonte-texto);
-    font-size: .825rem;
+    font-size: .925rem;
     font-weight: bold;
     text-wrap: balance;
     text-shadow: 1px 1px 4px #d8315b28;
