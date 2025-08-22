@@ -58,7 +58,8 @@ input[type=button] {
     font-weight: bold;
     font-family: var(--fonte-texto);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
-    font-size: .725rem;
+    font-size: .625rem;
+    border: 1px solid var(--cor-07);
 
     width: 100%;
     max-width: 120px;
@@ -101,9 +102,11 @@ section.lista ul#lista-tarefas {
 }
 
 section.lista ul#lista-tarefas > h2#titulo-tarefas {
-    color: var(--cor-04);
+    color: var(--cor-05);
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
+
+    margin: 1.2rem 0 1.2rem 0;
 }
 
 section.lista ul#lista-tarefas > li {
@@ -141,7 +144,6 @@ ul#lista-tarefas > li > div.botoes {
     justify-content: center;
     align-items: center;
     gap: .425rem;
-    
     border-radius: 1rem;
 }
 

@@ -14,11 +14,12 @@ btnAdicionar.addEventListener('click', () => {
     }
 
     let listaTarefa = document.getElementById('lista-tarefas');
-    
+
+    let headerLista = document.createElement('h2');
+    headerLista.id = 'titulo-tarefas';
+
     if (!document.getElementById('titulo-tarefas')) {
-        let headerLista = document.createElement('h2');
         headerLista.textContent = 'Tarefas';
-        headerLista.id = 'titulo-tarefas';
         listaTarefa.appendChild(headerLista);
     }
 
