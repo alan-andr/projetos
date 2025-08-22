@@ -6,9 +6,7 @@ btnAdicionar.addEventListener('click', () => {
     let mensagem = document.createElement('p');
 
     let sectionLista = document.querySelector('section.lista');
-    sectionLista.style.backgroundColor = '#FFFAFA';
-    sectionLista.style.border = '3px solid var(--cor-06)';
-    sectionLista.style.boxShadow = '1px 3px 8px -1px #d8315b40';
+    let i = document.createElement('i');
 
     divMensagem.innerHTML = '';
 
@@ -26,6 +24,9 @@ btnAdicionar.addEventListener('click', () => {
     if (!document.getElementById('titulo-tarefas')) {
         headerLista.textContent = 'Tarefas';
         listaTarefa.appendChild(headerLista);
+        sectionLista.style.backgroundColor = '#FFFAFA';
+        sectionLista.style.border = '3px solid var(--cor-06)';
+        sectionLista.style.boxShadow = '1px 3px 8px -1px #d8315b40';
     }
 
     let concluir = document.createElement('input');

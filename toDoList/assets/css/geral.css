@@ -20,14 +20,17 @@
     --fonte-texto: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
-header {
-    margin: 2rem 0 2rem 0;
+header {    
+    background-color: var(--cor-05);
+    padding: 2rem;
+    box-shadow: 1px 3px 10px -1px #00000045;
 }
 
 header h1 {
     text-align: center;
-    color: var(--cor-05);
+    color: var(--cor-04);
     font-family: var(--fonte-principal);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.26);
     font-size: 3rem;
 }
 
@@ -52,6 +55,7 @@ input[type=text] {
     max-width: 200px;
 
     text-align: center;
+    font-size: 1rem;
     font-family: var(--fonte-texto);
 }
 
@@ -66,22 +70,34 @@ input[type=button] {
     font-weight: bold;
     font-family: var(--fonte-texto);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
-    font-size: .625rem;
+    font-size: .525rem;
     border: 1px solid var(--cor-07);
 
     width: 100%;
-    max-width: 120px;
+    max-width: 110px;
 }
 
 input[type=button]:hover {
     background-color: var(--cor-06);
     cursor: pointer;
     transition-duration: .8s;
+    color: rgb(240, 240, 240);
 }
 
 input[type=text]:focus {
     outline: none;
-    background-color: beige;
+    background-color: var(--cor-04);
+
+    width: fit-content;
+}
+
+div#mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 3rem 0 3rem 0;
+
 }
 
 section.lista {
@@ -91,7 +107,7 @@ section.lista {
     align-items: center;
 
     width: 100%;
-    max-width: 400px;
+    max-width: 330px;
 
     margin: auto;
     margin-top: 2.5rem;
@@ -118,7 +134,8 @@ section.lista ul#lista-tarefas > h2#titulo-tarefas {
 
     font-family: var(--fonte-principal);
     font-size: 2rem;
-    text-shadow: 1px 1px 6px #d8315b5c;
+    text-align: center;
+    text-shadow: 1px 1px 6px #1e1b1845;
 
     margin: 1.2rem 0 1.2rem 0;
 }
@@ -128,6 +145,7 @@ section.lista ul#lista-tarefas > li {
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
+    gap: .500rem;
 
     padding: 1rem;
     margin: 1rem 0 0 0;
@@ -136,17 +154,20 @@ section.lista ul#lista-tarefas > li {
     box-shadow: 1px 3px 8px -1px #d8315b28;
 
     max-width: 100%;
-    width: 330px;
+    width: 300px;
 
     background-color: var(--cor-03);
 }
 
 ul#lista-tarefas > li > span.item_texto {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: var(--fonte-texto);
-    font-size: .925rem;
-    font-weight: bolder;
+    font-size: .825rem;
+    font-weight: bold;
+    text-wrap: balance;
     text-shadow: 1px 1px 4px #d8315b28;
+    text-align: center;
+    line-height: 1.5;
 
     color: var(--cor-05);
 }
@@ -165,8 +186,4 @@ ul#lista-tarefas > li > div.botoes {
     border-radius: 1rem;
 }
 
-div#mensagem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
