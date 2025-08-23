@@ -28,6 +28,8 @@ btnAdicionar.addEventListener('click', () => {
         sectionLista.style.boxShadow = '1px 3px 8px -1px #d8315b40';
     }
 
+    // Botões
+
     let concluir = document.createElement('input');
     concluir.type = 'button';
     concluir.value = 'Concluir';
@@ -50,8 +52,13 @@ btnAdicionar.addEventListener('click', () => {
     let spanTexto = document.createElement('span');
     spanTexto.textContent = textoTarefa;
     spanTexto.classList.add('item_texto');
-    itemTarefa.append(spanTexto)
+    itemTarefa.appendChild(spanTexto)
     itemTarefa.appendChild(divBotoes);
+
+    let editarTexto = document.createElement('input');
+    editarTexto.type = 'text'
+    editarTexto.name = 'editarTexto';
+    editarTexto.id = 'inputSalvar'
     
     listaTarefa.appendChild(itemTarefa);
 
@@ -62,6 +69,21 @@ btnAdicionar.addEventListener('click', () => {
         editar.remove()
         concluir.remove();
     })
+
+    editar.addEventListener('click', () => {
+        spanTexto.textContent = '';
+        spanTexto.appendChild(editarTexto);
+
+        editar.value = 'Salvar'
+
+        let novaTarefa = document.getElementById('inputSalvar').value;
+
+        editar.addEventListener('click', () => {
+            spanTexto.textContent = novaTarefa;
+        })
+        
+    })
+
 
     remover.addEventListener('click', () => {
         itemTarefa.remove()

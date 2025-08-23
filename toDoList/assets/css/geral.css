@@ -89,8 +89,6 @@ input[type=button]:hover {
 input[type=text]:focus {
     outline: none;
     background-color: var(--cor-04);
-
-    width: fit-content;
 }
 
 div#mensagem {
@@ -139,24 +137,24 @@ section.lista ul#lista-tarefas > h2#titulo-tarefas {
     text-align: center;
     text-shadow: 1px 1px 6px #1e1b1845;
 
-    margin: 1.2rem 0 1.2rem 0;
+    margin: 0 0 1.2rem 0;
 }
 
 section.lista ul#lista-tarefas > li {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
-    padding: 1rem;
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 0 0;
+    padding: .250rem;
     border-radius: 1rem;
     border: 1px solid var(--cor-05);
-    box-shadow: 1px 3px 8px -1px #d8315b28;
+    box-shadow: 1px 3px 5px 1px #d8315b42;
 
     max-width: 100%;
     height: 150px;
-    width: 300px;
+    width: 250px;
 
     background-color: var(--cor-03);
 }
@@ -184,8 +182,8 @@ ul#lista-tarefas > li > div.botoes {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .425rem;
-    border-radius: 1rem;
+    gap: .525rem;
+    border-radius: .825rem;
 }
 
 
