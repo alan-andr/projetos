@@ -25,7 +25,8 @@ btnAdicionar.addEventListener('click', () => {
         listaTarefa.appendChild(headerLista);
         sectionLista.style.backgroundColor = '#FFFAFA';
         sectionLista.style.border = '3px solid var(--cor-06)';
-        sectionLista.style.boxShadow = '1px 3px 8px -1px #d8315b40';
+        sectionLista.style.boxShadow = '1px 3px 5px 1px #d8315b1f';
+
     }
 
     // Botões
@@ -33,18 +34,24 @@ btnAdicionar.addEventListener('click', () => {
     const btnConcluir = document.createElement('input');
     btnConcluir.type = 'button';
     btnConcluir.value = 'Concluir';
+    btnConcluir.id = 'concluir';
 
     const btnRemover = document.createElement('input');
     btnRemover.type = 'button';
     btnRemover.value = 'Remover';
+    btnRemover.id = 'remover'
+    
 
     const btnEditar = document.createElement('input');
     btnEditar.type = 'button';
     btnEditar.value = 'Editar';
+    btnEditar.id = 'editar'
+    
 
     const btnSalvar = document.createElement('input');
     btnSalvar.type = 'button';
     btnSalvar.value = 'Salvar';
+    
 
     let divBotoes = document.createElement('div');
     divBotoes.classList.add('botoes');

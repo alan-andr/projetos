@@ -22,7 +22,7 @@
 
 header {    
     background-color: var(--cor-05);
-    padding: 2rem;
+    padding: 4rem;
     box-shadow: 1px 3px 10px -1px #00000045;
 }
 
@@ -45,12 +45,17 @@ main > section.input {
     align-items: center;
     gap: 1.5rem;
 
-    margin: 3rem 0 0 0;
+    margin: 3rem auto 0 auto;
+
+    height: 100px;
+    width: 100%;
+    max-width: 300px;
+    
 }
 
 input[type=text] {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid var(--cor-06);
 
     width: 100%;
     max-width: 250px;
@@ -66,17 +71,17 @@ input[type=button] {
     color: white;
     
     padding: 8px 8px;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 5px -1px #ae455f6c;
+    border-radius: .850rem;
+    box-shadow: 1px 1px 5px 1px #ae455f3d;
     
     font-weight: bold;
     font-family: var(--fonte-texto);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.321);
     font-size: .725rem;
     border: 1px solid var(--cor-07);
 
     width: 100%;
-    max-width: 110px;
+    max-width: 120px;
 }
 
 input[type=button]:hover {
@@ -89,6 +94,35 @@ input[type=button]:hover {
 input[type=text]:focus {
     outline: none;
     background-color: var(--cor-04);
+}
+
+input[type=button]#concluir {
+    color: white;
+    background-color: #28a745;
+}
+
+input[type=button]#editar {
+    background-color: #ffc107;
+    color: black;
+}
+
+input[type=button]#remover {
+    background-color: #dc3545;
+}
+
+input[type=button]#concluir:hover {
+    background-color: #218838;
+    color: lightgray;
+}
+
+input[type=button]#editar:hover {
+    background-color: #e0a800;
+    color: var(--cor-07);
+}
+
+input[type=button]#remover:hover {
+    background-color: #c82333;
+    color: lightgray;
 }
 
 div#mensagem {
@@ -109,7 +143,8 @@ section.lista {
     max-width: 330px;
 
     margin: auto;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
     padding: 2rem;
     border-radius: .850rem;
 
@@ -148,9 +183,9 @@ section.lista ul#lista-tarefas > li {
 
     margin: 2rem 0 0 0;
     padding: .250rem;
-    border-radius: 1rem;
+    border-radius: .650rem;
     border: 1px solid var(--cor-05);
-    box-shadow: 1px 3px 5px 1px #d8315b42;
+    box-shadow: 1px 3px 5px 1px #d8315b1f;
 
     max-width: 100%;
     height: 140px;
