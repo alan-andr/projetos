@@ -21,7 +21,7 @@ btnAdicionar.addEventListener('click', () => {
     headerLista.id = 'titulo-tarefas';
 
     if (!document.getElementById('titulo-tarefas')) {
-        headerLista.textContent = 'Tarefas';
+        headerLista.textContent = 'Tarefas à cumprir';
         listaTarefa.appendChild(headerLista);
         sectionLista.style.backgroundColor = '#FFFAFA';
         sectionLista.style.border = '3px solid var(--cor-06)';
@@ -62,9 +62,6 @@ btnAdicionar.addEventListener('click', () => {
     listaTarefa.appendChild(itemTarefa);
 
     document.getElementById('tarefa').value = '';
-
-    let lixeira = [];
-    lixeira.push(spanTexto);
 
     btnConcluir.addEventListener('click', () => {
         spanTexto.classList.add('concluida')
