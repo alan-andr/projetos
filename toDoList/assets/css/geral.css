@@ -159,7 +159,7 @@ section.lista ul#lista-tarefas > li {
     background-color: var(--cor-03);
 }
 
-ul#lista-tarefas > li > span.item_texto {
+span.item_texto {
     text-transform: uppercase;
     font-family: var(--fonte-texto);
     font-size: .925rem;
@@ -172,11 +172,15 @@ ul#lista-tarefas > li > span.item_texto {
     color: var(--cor-05);
 }
 
-ul#lista-tarefas > li > span.concluida {
+span.concluida {
     text-decoration: line-through;
     color: var(--cor-05);
     opacity: 0.7;
 }
+
+input[type=text].novaTarefa {
+    width: fit-content;
+} 
 
 ul#lista-tarefas > li > div.botoes {
     display: flex;

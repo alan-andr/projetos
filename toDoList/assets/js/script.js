@@ -30,23 +30,27 @@ btnAdicionar.addEventListener('click', () => {
 
     // Botões
 
-    let concluir = document.createElement('input');
-    concluir.type = 'button';
-    concluir.value = 'Concluir';
+    const btnConcluir = document.createElement('input');
+    btnConcluir.type = 'button';
+    btnConcluir.value = 'Concluir';
 
-    let remover = document.createElement('input');
-    remover.type = 'button';
-    remover.value = 'Remover';
+    const btnRemover = document.createElement('input');
+    btnRemover.type = 'button';
+    btnRemover.value = 'Remover';
 
-    let editar = document.createElement('input');
-    editar.type = 'button';
-    editar.value = 'Editar';
+    const btnEditar = document.createElement('input');
+    btnEditar.type = 'button';
+    btnEditar.value = 'Editar';
+
+    const btnSalvar = document.createElement('input');
+    btnSalvar.type = 'button';
+    btnSalvar.value = 'Salvar';
 
     let divBotoes = document.createElement('div');
     divBotoes.classList.add('botoes');
-    divBotoes.appendChild(concluir)
-    divBotoes.appendChild(editar);
-    divBotoes.appendChild(remover);
+    divBotoes.appendChild(btnConcluir)
+    divBotoes.appendChild(btnEditar);
+    divBotoes.appendChild(btnRemover);
 
     let itemTarefa = document.createElement('li');
     let spanTexto = document.createElement('span');
@@ -54,38 +58,41 @@ btnAdicionar.addEventListener('click', () => {
     spanTexto.classList.add('item_texto');
     itemTarefa.appendChild(spanTexto)
     itemTarefa.appendChild(divBotoes);
-
-    let editarTexto = document.createElement('input');
-    editarTexto.type = 'text'
-    editarTexto.name = 'editarTexto';
-    editarTexto.id = 'inputSalvar'
     
     listaTarefa.appendChild(itemTarefa);
 
     document.getElementById('tarefa').value = '';
 
-    concluir.addEventListener('click', () => {
+    let lixeira = [];
+    lixeira.push(spanTexto);
+
+    btnConcluir.addEventListener('click', () => {
         spanTexto.classList.add('concluida')
-        editar.remove()
-        concluir.remove();
+        btnEditar.remove()
+        btnConcluir.remove();
     })
 
-    editar.addEventListener('click', () => {
-        spanTexto.textContent = '';
-        spanTexto.appendChild(editarTexto);
+    btnEditar.addEventListener('click', () => {
+        const inputTexto = document.createElement('input');
+        inputTexto.type = 'text';
+        inputTexto.name = 'editarTexto';
+        inputTexto.classList.add('novaTarefa');
 
-        editar.value = 'Salvar'
+        spanTexto.replaceWith(inputTexto);
 
-        let novaTarefa = document.getElementById('inputSalvar').value;
+        let novaTarefa = document.querySelector('input.novaTarefa');
 
-        editar.addEventListener('click', () => {
-            spanTexto.textContent = novaTarefa;
-        })
-        
+        btnEditar.replaceWith(btnSalvar);
+
+        btnSalvar.onclick = () => {
+            spanTexto.textContent = novaTarefa.value;
+            inputTexto.replaceWith(spanTexto);
+
+            btnSalvar.replaceWith(btnEditar);
+        };
     })
 
-
-    remover.addEventListener('click', () => {
+    btnRemover.addEventListener('click', () => {
         itemTarefa.remove()
     })
-})
+});
