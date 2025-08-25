@@ -1,5 +1,12 @@
 const btnAdicionar = document.getElementById('adicionar');
 
+const data = new Date();
+let footer = document.getElementById('footer-container');
+let ano = data.getFullYear();
+let pFooter = document.createElement('p');
+pFooter.textContent = `© ${ano} To-Do List`;
+footer.appendChild(pFooter);
+
 btnAdicionar.addEventListener('click', () => {
     let textoTarefa = document.getElementById('tarefa').value;
     let divMensagem = document.getElementById('mensagem');
@@ -21,7 +28,7 @@ btnAdicionar.addEventListener('click', () => {
     headerLista.id = 'titulo-tarefas';
 
     if (!document.getElementById('titulo-tarefas')) {
-        headerLista.textContent = 'Tarefas à cumprir';
+        headerLista.textContent = 'Tarefas a cumprir';
         listaTarefa.appendChild(headerLista);
         sectionLista.style.backgroundColor = '#FFFAFA';
         sectionLista.style.border = '3px solid var(--cor-06)';
